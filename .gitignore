@@ -1,2 +1,4 @@
 /virt
+/.idea
 db.sqlite3
+*.lnk

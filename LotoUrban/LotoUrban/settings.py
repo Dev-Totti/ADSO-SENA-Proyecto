@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 
     "core",
+    "userauths"
 ]
 
 MIDDLEWARE = [
@@ -134,3 +135,4 @@ JAZZMIN_SETTINGS = {
     "site_logo": "TempLogo.png",
 }
 
+AUTH_USER_MODEL = "userauths.User"
