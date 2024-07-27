@@ -2,8 +2,9 @@
 /.idea
 /LotoUrban/media/
 /LotoUrban/core/migrations
+__pycache__/
 *.sqlite3
 *.sqlite
 *.lnk
-__pycache__/
+
 
