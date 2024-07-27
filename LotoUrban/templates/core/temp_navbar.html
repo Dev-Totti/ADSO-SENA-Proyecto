@@ -25,16 +25,16 @@
 
                 {% if user.is_authenticated %}
                 <li class="nav-item">
-                    <a class="nav-link" href="user/logout"
+                    <a class="nav-link" href="../user/logout"
                         >Cerrar Sesión | {{ user.username }}</a
                     >
                 </li>
                 {% else %}
                 <li class="nav-item">
-                    <a class="nav-link" href="user/login">Iniciar Sesión</a>
+                    <a class="nav-link" href="../user/login">Iniciar Sesión</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="user/signup">Registrarse</a>
+                    <a class="nav-link" href="../user/signup">Registrarse</a>
                 </li>
 
                 {% endif %}
