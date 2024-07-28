@@ -1,6 +1,7 @@
 /virt
 /.idea
 /LotoUrban/media/
+/LotoUrban/static/
 /LotoUrban/core/migrations
 __pycache__/
 *.sqlite3

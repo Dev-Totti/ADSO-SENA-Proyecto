@@ -3,8 +3,14 @@ from django.shortcuts import render
 from .models import Product
 
 
-def home(request):
-    return HttpResponse("Hello, World!")
+def index(request):
+    products = Product.objects.all()
+
+    context = {
+        'products': products
+    }
+
+    return render(request, "index.html", context)
 
 
 def temp(request):
@@ -15,3 +21,12 @@ def temp(request):
     }
 
     return render(request, "core/temp.html", context)
+
+def test(request):
+    products = Product.objects.all()
+
+    context = {
+        'products': products
+    }
+
+    return render(request, "test/index.html", context)
