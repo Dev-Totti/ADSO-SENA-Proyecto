@@ -1,12 +1,27 @@
 {% extends 'base.html' %}
 <!-- Block Content -->
 {% block content %}
+<main id="MainContent" class="content-for-layout">
+    <div class="login-page mt-24">
+        <div class="container">
+            <form action="" class="login-form common-form mx-auto" method="POST">
+                {% csrf_token %}
 
-<h1>Registro</h1>
-<form action="" method="POST">
-    {% csrf_token %} {{ form }}
-
-    <button type="submit">Sign Up</button>
-</form>
-
+                <div class="section-header mb-3">
+                    <h2 class="section-heading text-center">Crear una cuenta</h2>
+                </div>
+                {{ form }}
+                <div class="col-12 mt-3">
+                    <button type="submit" class="btn-primary d-block mt-3 btn-signin">CREAR CUENTA</button>
+                    <a
+                        href="javascript:void(0);"
+                        onclick="window.location.href='/user/signin'"
+                        class="btn-secondary mt-2 btn-signin"
+                        >INICIAR SESIÓN</a
+                    >
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
 {% endblock %}
