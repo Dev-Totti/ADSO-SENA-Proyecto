@@ -132,7 +132,7 @@ JAZZMIN_SETTINGS = {
     "side_title": "Test1",
     "site_header": "Loto Urban",
     "site_brand": "Loto Urban",
-    "site_logo": "TempLogo.png",
+    "site_logo": "assets/img/brand/logo.png",
 }
 
 AUTH_USER_MODEL = "userauths.User"
