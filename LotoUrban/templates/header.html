@@ -324,7 +324,7 @@
                                                 />
                                             </svg>
                                             {% if user.is_authenticated %}
-                                            <span>{{ user.username }}</span>
+                                            <span>{{ user.first_name }} {{ user.last_name }}</span>
                                             {% else %}
                                             <span>Iniciar Sesión</span>
                                             {% endif %}</a
