@@ -16,13 +16,11 @@ def signup_view(request):
         form = UserSignupForm(request.POST)
         if form.is_valid():
             new_user = form.save()
-            username = form.cleaned_data['username']
-            messages.success(request, f'Nueva cuenta creada {username}')
+            first_name = form.cleaned_data['first_name']
+            last_name = form.cleaned_data['last_name']
+            messages.success(request, f'{first_name} {last_name} se ha registrado correctamente')
             new_user = authenticate(username=form.cleaned_data['email'], password=form.cleaned_data['password1'])
-
             login(request, new_user)
-            messages.success(request, f'{username} se ha registrado correctamente')
-
             return redirect("core:index")
     else:
         form = UserSignupForm()
@@ -46,7 +44,7 @@ def signin_view(request):
         user = authenticate(request, email=email, password=password)
         if user is not None:
             login(request, user)
-            messages.success(request, f'Bienvenido {user.username}')
+            messages.success(request, f'Bienvenido {user.first_name}')
             return redirect("core:index")
         else:
             messages.error(request, "Usuario o contraseña incorrectos")
