@@ -18,3 +18,6 @@ Loto Urban es una tienda en línea enfocada en el mercado masculino, ofreciendo 
 - Carrito de Compras: Agregar productos al carrito y gestionar las compras.
 - Procesamiento de Pedidos: Realizar pedidos y calcular totales (subtotal, envío, impuestos, total).
 - Sistema de Categorías: Organización de productos por categorías.
+
+## Capturas de Pantalla
+![Screenshot_20-10-2024_191017_127 0 0 1](https://github.com/user-attachments/assets/240c3d21-7f8f-4558-a784-b9e1c62dca86)
