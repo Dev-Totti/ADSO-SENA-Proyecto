@@ -1,16 +1,19 @@
 {% extends 'base.html' %}
 <!-- Block Content -->
 {% block content %}
+
 <main id="MainContent" class="content-for-layout">
     <div class="login-page mt-24">
         <div class="container">
-            <form action="" class="login-form common-form mx-auto" method="POST">
+            <form action="" class="login-form mx-auto" method="POST">
                 {% csrf_token %}
 
                 <div class="section-header mb-3">
                     <h2 class="section-heading text-center">Crear una cuenta</h2>
                 </div>
+
                 {{ form }}
+
                 <div class="col-12 mt-3">
                     <button type="submit" class="btn-primary d-block mt-3 btn-signin">CREAR CUENTA</button>
                     <a
@@ -24,4 +27,5 @@
         </div>
     </div>
 </main>
+
 {% endblock %}

@@ -13,20 +13,11 @@ def index(request):
     return render(request, "index.html", context)
 
 
-def temp(request):
+def full(request):
     products = Product.objects.all()
 
     context = {
         'products': products
     }
 
-    return render(request, "core/temp.html", context)
-
-def test(request):
-    products = Product.objects.all()
-
-    context = {
-        'products': products
-    }
-
-    return render(request, "test/index.html", context)
+    return render(request, "full/index.html", context)

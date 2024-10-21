@@ -1,335 +1,89 @@
 {% load static %}
-<!-- Header -->
-<header class="sticky-header border-btm-black header-1">
-    <div class="header-bottom">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Logo -->
-                <div class="col-lg-3 col-md-4 col-4">
-                    <a href="javascript:void(0);" onclick="window.location.href='/'" class="logo-main header-logo">
-                        <img
-                            src="{% static 'assets/img/brand/logo.png' %}"
-                            class="logo-img"
-                            loading="lazy"
-                            alt="loto urban"
-                        />
-                        <span class="logo-text text-uppercase"> Loto Urban </span>
-                    </a>
-                </div>
 
-                <!-- Navigation -->
-                <div class="col-lg-6 d-lg-block d-none">
-                    <nav class="site-navigation">
-                        <ul class="main-menu list-unstyled justify-content-center">
-                            <li class="menu-list-item nav-item">
-                                <a class="nav-link" href="javascript:void(0);" onclick="window.location.href='/'"
-                                    >Inicio</a
+<header class="sticky-header">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-3 col-md-4 col-4">
+                <a href="javascript:void(0);" onclick="window.location.href='/'" class="header-logo">
+                    <img
+                        src="{% static 'assets/img/brand/logo.png' %}"
+                        loading="lazy"
+                        alt="loto urban"
+                        class="logo-img"
+                    />
+                    <span class="text-uppercase logo-text"> Loto Urban </span>
+                </a>
+            </div>
+            <div class="col-lg-6 d-lg-block d-none">
+                <nav>
+                    <ul class="main-menu list-unstyled justify-content-center">
+                        <li class="main-menu-item">
+                            <a href="javascript:void(0);" onclick="window.location.href='/'">Inicio</a>
+                        </li>
+
+                        <li class="main-menu-item">
+                            <a href="javascript:void(0);" onclick="window.location.href='/'">Tienda</a>
+                        </li>
+
+                        <li class="main-menu-item">
+                            <a href="javascript:void(0);" onclick="window.location.href='/'">Otros</a>
+                        </li>
+
+                        <li class="main-menu-item">
+                            <a href="javascript:void(0);" onclick="window.location.href='/'">Contacto</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="col-lg-3 col-md-8 col-8">
+                <div class="row align-items-center">
+                    <ul class="icons-menu list-unstyled">
+                        <!-- Search Icon -->
+                        <li class="">
+                            <a class="header-icon" href="javascript:void(0)">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="19"
+                                    height="19"
+                                    fill="currentColor"
+                                    class="icon icon-search"
+                                    viewBox="0 0 16 16"
                                 >
-                            </li>
-                            <li class="menu-list-item nav-item has-megamenu">
-                                <div class="mega-menu-header">
-                                    <a class="nav-link" href="collection-left-sidebar.html"> Tienda </a>
-                                    <span class="open-submenu">
-                                        <svg
-                                            class="icon icon-dropdown"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="24"
-                                            height="24"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        >
-                                            <polyline points="6 9 12 15 18 9"></polyline>
-                                        </svg>
-                                    </span>
-                                </div>
-                                <div class="submenu-transform submenu-transform-desktop">
-                                    <div class="container">
-                                        <ul class="submenu megamenu-container list-unstyled">
-                                            <li class="menu-list-item nav-item-sub">
-                                                <div class="mega-menu-header">
-                                                    <a
-                                                        class="nav-link-sub nav-text-sub megamenu-heading"
-                                                        href="collection-left-sidebar.html"
-                                                    >
-                                                        CATEGORY PAGES
-                                                    </a>
-                                                </div>
-                                                <div class="submenu-transform megamenu-transform">
-                                                    <ul class="megamenu list-unstyled">
-                                                        <li class="menu-list-item nav-item-sub">
-                                                            <a
-                                                                class="nav-link-sub nav-text-sub"
-                                                                href="collection-left-sidebar.html"
-                                                                >With Left Sidebar</a
-                                                            >
-                                                        </li>
-                                                        <li class="menu-list-item nav-item-sub">
-                                                            <a
-                                                                class="nav-link-sub nav-text-sub"
-                                                                href="collection-right-sidebar.html"
-                                                                >With Right Sidebar</a
-                                                            >
-                                                        </li>
-                                                        <li class="menu-list-item nav-item-sub">
-                                                            <a
-                                                                class="nav-link-sub nav-text-sub"
-                                                                href="collection-left-sidebar.html"
-                                                                >3 Column Layout</a
-                                                            >
-                                                        </li>
-                                                        <li class="menu-list-item nav-item-sub">
-                                                            <a
-                                                                class="nav-link-sub nav-text-sub"
-                                                                href="collection-without-sidebar.html"
-                                                                >4 Column Layout</a
-                                                            >
-                                                        </li>
-                                                        <li class="menu-list-item nav-item-sub">
-                                                            <a
-                                                                class="nav-link-sub nav-text-sub"
-                                                                href="collection-without-sidebar.html"
-                                                                >Without Sidebar</a
-                                                            >
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li class="menu-list-item nav-item-sub">
-                                                <div
-                                                    class="mega-menu-header d-flex align-items-center justify-content-between"
-                                                >
-                                                    <a
-                                                        class="nav-link-sub nav-text-sub megamenu-heading"
-                                                        href="collection-right-sidebar.html"
-                                                    >
-                                                        PRODUCT PAGES
-                                                    </a>
-                                                </div>
-                                                <div class="submenu-transform megamenu-transform">
-                                                    <ul class="megamenu list-unstyled">
-                                                        <li class="menu-list-item nav-item-sub">
-                                                            <a class="nav-link-sub nav-text-sub" href="product.html"
-                                                                >Simple Product</a
-                                                            >
-                                                        </li>
-                                                        <li class="menu-list-item nav-item-sub">
-                                                            <a class="nav-link-sub nav-text-sub" href="product.html"
-                                                                >Variable Product</a
-                                                            >
-                                                        </li>
-                                                        <li class="menu-list-item nav-item-sub">
-                                                            <a class="nav-link-sub nav-text-sub" href="product.html"
-                                                                >Sale Product</a
-                                                            >
-                                                        </li>
-                                                        <li class="menu-list-item nav-item-sub">
-                                                            <a class="nav-link-sub nav-text-sub" href="product.html"
-                                                                >Featured & On Sale</a
-                                                            >
-                                                        </li>
-                                                        <li class="menu-list-item nav-item-sub">
-                                                            <a class="nav-link-sub nav-text-sub" href="product-2.html"
-                                                                >Tab Inside</a
-                                                            >
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li class="menu-list-item nav-item-sub">
-                                                <div
-                                                    class="mega-menu-header d-flex align-items-center justify-content-between"
-                                                >
-                                                    <a
-                                                        class="nav-link-sub nav-text-sub megamenu-heading"
-                                                        href="index.html"
-                                                    >
-                                                        PRODUCT LAYOUTS
-                                                    </a>
-                                                </div>
-                                                <div class="submenu-transform megamenu-transform">
-                                                    <ul class="megamenu list-unstyled">
-                                                        <li class="menu-list-item nav-item-sub">
-                                                            <a class="nav-link-sub nav-text-sub" href="product-2.html"
-                                                                >Grid Images</a
-                                                            >
-                                                        </li>
-                                                        <li class="menu-list-item nav-item-sub">
-                                                            <a class="nav-link-sub nav-text-sub" href="product.html"
-                                                                >Vertical Thumb</a
-                                                            >
-                                                        </li>
-                                                        <li class="menu-list-item nav-item-sub">
-                                                            <a class="nav-link-sub nav-text-sub" href="product.html"
-                                                                >Gallery Type</a
-                                                            >
-                                                        </li>
-                                                        <li class="menu-list-item nav-item-sub">
-                                                            <a class="nav-link-sub nav-text-sub" href="product.html"
-                                                                >Product Width Layout</a
-                                                            >
-                                                        </li>
-                                                        <li class="menu-list-item nav-item-sub">
-                                                            <a class="nav-link-sub nav-text-sub" href="product.html"
-                                                                >Sticky Gallery</a
-                                                            >
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li class="menu-list-item nav-item-sub">
-                                                <div
-                                                    class="mega-menu-header d-flex align-items-center justify-content-between"
-                                                >
-                                                    <a
-                                                        class="mega-menu-img nav-link-sub nav-text-sub"
-                                                        href="collection-left-sidebar.html"
-                                                    >
-                                                        <img
-                                                            class="menu-img"
-                                                            src="{% static 'assets/img/menu/1.jpg' %}"
-                                                            alt="img"
-                                                        />
-                                                        <h2 class="img-menu-heading text_16 mt-2">
-                                                            Featured Collection
-                                                        </h2>
-                                                        <div class="img-menu-action text_12 bg-transparent p-0">
-                                                            <span>DISCOVER NOW</span>
-                                                            <span>
-                                                                <svg
-                                                                    xmlns="http://www.w3.org/2000/svg"
-                                                                    width="30"
-                                                                    height="18"
-                                                                    fill="#000"
-                                                                    class="icon-right-long"
-                                                                    viewBox="0 0 16 16"
-                                                                >
-                                                                    <path
-                                                                        fill-rule="evenodd"
-                                                                        d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
-                                                                    />
-                                                                </svg>
-                                                            </span>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="menu-list-item nav-item has-dropdown">
-                                <div class="mega-menu-header">
-                                    <a class="nav-link" href="about-us.html"> Otros </a>
-                                    <span class="open-submenu">
-                                        <svg
-                                            class="icon icon-dropdown"
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="24"
-                                            height="24"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            stroke="currentColor"
-                                            stroke-width="2"
-                                            stroke-linecap="round"
-                                            stroke-linejoin="round"
-                                        >
-                                            <polyline points="6 9 12 15 18 9"></polyline>
-                                        </svg>
-                                    </span>
-                                </div>
-                                <div class="submenu-transform submenu-transform-desktop">
-                                    <ul class="submenu list-unstyled">
-                                        <li class="menu-list-item nav-item-sub">
-                                            <a class="nav-link-sub nav-text-sub" href="about-us.html">About Us</a>
-                                        </li>
-                                        <li class="menu-list-item nav-item-sub">
-                                            <a class="nav-link-sub nav-text-sub" href="contact.html">Contact</a>
-                                        </li>
-                                        <li class="menu-list-item nav-item-sub">
-                                            <a class="nav-link-sub nav-text-sub" href="faq.html">FAQ</a>
-                                        </li>
-                                        <li class="menu-list-item nav-item-sub">
-                                            <a class="nav-link-sub nav-text-sub" href="404.html">404 page</a>
-                                        </li>
-                                        <li class="menu-list-item nav-item-sub">
-                                            <a class="nav-link-sub nav-text-sub" href="login.html">Login</a>
-                                        </li>
-                                        <li class="menu-list-item nav-item-sub">
-                                            <a class="nav-link-sub nav-text-sub" href="register.html">Register</a>
-                                        </li>
-                                        <li class="menu-list-item nav-item-sub">
-                                            <a class="nav-link-sub nav-text-sub" href="wishlist.html">Wishlist</a>
-                                        </li>
-                                        <li class="menu-list-item nav-item-sub">
-                                            <a class="nav-link-sub nav-text-sub" href="cart.html">Cart</a>
-                                        </li>
-                                        <li class="menu-list-item nav-item-sub">
-                                            <a class="nav-link-sub nav-text-sub" href="checkout.html">Checkout</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="menu-list-item nav-item">
-                                <a class="nav-link" href="contact">Contacto</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+                                    <path
+                                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
 
-                <!-- Right Side Icons -->
-                <div class="col-lg-3 col-md-8 col-8">
-                    <div class="row align-items-center">
-                        <ul class="icons-menu list-unstyled justify-content-center">
-                            <!-- Search Icon -->
-                            <li class="icons-menu-item">
-                                <a class="header-action-item header-search" href="javascript:void(0)">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="19"
-                                        height="19"
-                                        fill="currentColor"
-                                        class="bi bi-search icon-menu icon-search"
-                                        viewBox="0 0 16 16"
+                        <!-- User Icon -->
+                        <li class="">
+                            <div class="megamenu">
+                                <div class="megamenu-header">
+                                    <a
+                                        class="header-icon"
+                                        href="javascript:void(0);"
+                                        onclick="window.location.href='/user/signin'"
                                     >
-                                        <path
-                                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
-                                        />
-                                    </svg>
-                                </a>
-                            </li>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            fill="currentColor"
+                                            class="icon icon-user"
+                                            viewBox="0 0 16 16"
+                                        >
+                                            <path
+                                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
+                                            />
+                                        </svg>
+                                        {% if user.is_authenticated %}
+                                        <span>{{ user.first_name }} {{ user.last_name }}</span>
+                                        {% else %}
+                                        <span>Iniciar Sesión</span>
+                                        {% endif %}
 
-                            <!-- User Icon -->
-                            <li class="icons-menu-item">
-                                <div class="menu-list-item has-dropdown">
-                                    <div class="mega-menu-header">
-                                        <a
-                                            class="header-action-item header-login"
-                                            href="javascript:void(0);"
-                                            onclick="window.location.href='/user/signin'"
-                                        >
-                                            <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                width="24"
-                                                height="24"
-                                                fill="currentColor"
-                                                class="bi bi-person icon-menu icon-user"
-                                                viewBox="0 0 16 16"
-                                            >
-                                                <path
-                                                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
-                                                />
-                                            </svg>
-                                            {% if user.is_authenticated %}
-                                            <span>{{ user.first_name }} {{ user.last_name }}</span>
-                                            {% else %}
-                                            <span>Iniciar Sesión</span>
-                                            {% endif %}</a
-                                        >
-                                        <span class="open-submenu">
+                                        <span class="">
                                             <svg
                                                 class="icon icon-dropdown"
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -345,150 +99,156 @@
                                                 <polyline points="6 9 12 15 18 9"></polyline>
                                             </svg>
                                         </span>
-                                    </div>
-                                    <div class="submenu-transform submenu-transform-desktop">
-                                        <ul class="submenu list-unstyled">
-                                            {% if user.is_authenticated %}
-                                            <li class="menu-list-item nav-item-sub">
-                                                <a
-                                                    class="nav-link-sub nav-text-sub"
-                                                    href="javascript:void(0);"
-                                                    onclick="window.location.href='/user/profile'"
-                                                    >Perfil</a
-                                                >
-                                            </li>
-                                            <li class="menu-list-item nav-item-sub">
-                                                <a
-                                                    class="nav-link-sub nav-text-sub"
-                                                    href="javascript:void(0);"
-                                                    onclick="window.location.href='/user/address'"
-                                                    >Direcciones</a
-                                                >
-                                            </li>
-                                            <li class="menu-list-item nav-item-sub">
-                                                <a
-                                                    class="nav-link-sub nav-text-sub"
-                                                    href="javascript:void(0);"
-                                                    onclick="window.location.href='/user/payment'"
-                                                    >Metodos de Pago</a
-                                                >
-                                            </li>
-                                            <li class="menu-list-item nav-item-sub">
-                                                <a
-                                                    class="nav-link-sub nav-text-sub"
-                                                    href="javascript:void(0);"
-                                                    onclick="window.location.href='/user/signout'"
-                                                    >Cerrar Sesión</a
-                                                >
-                                            </li>
-                                            {% else %}
-                                            <li class="menu-list-item nav-item-sub">
-                                                <a
-                                                    class="nav-link-sub nav-text-sub"
-                                                    href="javascript:void(0);"
-                                                    onclick="window.location.href='/user/signin'"
-                                                    >Iniciar Sesión</a
-                                                >
-                                            </li>
-                                            <li class="menu-list-item nav-item-sub">
-                                                <a
-                                                    class="nav-link-sub nav-text-sub"
-                                                    href="javascript:void(0);"
-                                                    onclick="window.location.href='/user/signup'"
-                                                    >Registrarse</a
-                                                >
-                                            </li>
-                                            {% endif %}
-                                        </ul>
-                                    </div>
+                                    </a>
                                 </div>
-                            </li>
+                                <div class="megamenu-content">
+                                    <ul class="list-unstyled">
+                                        {% if user.is_authenticated %}
+                                        <li class="megamenu-item">
+                                            <a
+                                                class="nav-link-sub nav-text-sub"
+                                                href="javascript:void(0);"
+                                                onclick="window.location.href='/user/profile'"
+                                                >Perfil</a
+                                            >
+                                        </li>
+                                        <li class="megamenu-item">
+                                            <a
+                                                class="nav-link-sub nav-text-sub"
+                                                href="javascript:void(0);"
+                                                onclick="window.location.href='/user/address'"
+                                                >Direcciones</a
+                                            >
+                                        </li>
+                                        <li class="megamenu-item">
+                                            <a
+                                                class="nav-link-sub nav-text-sub"
+                                                href="javascript:void(0);"
+                                                onclick="window.location.href='/user/payment'"
+                                                >Metodos de Pago</a
+                                            >
+                                        </li>
+                                        <li class="megamenu-item">
+                                            <a
+                                                class="nav-link-sub nav-text-sub"
+                                                href="javascript:void(0);"
+                                                onclick="window.location.href='/user/signout'"
+                                                >Cerrar Sesión</a
+                                            >
+                                        </li>
+                                        {% else %}
+                                        <li class="megamenu-item">
+                                            <a
+                                                class="nav-link-sub nav-text-sub"
+                                                href="javascript:void(0);"
+                                                onclick="window.location.href='/user/signin'"
+                                                >Iniciar Sesión</a
+                                            >
+                                        </li>
+                                        <li class="megamenu-item">
+                                            <a
+                                                class="nav-link-sub nav-text-sub"
+                                                href="javascript:void(0);"
+                                                onclick="window.location.href='/user/signup'"
+                                                >Registrarse</a
+                                            >
+                                        </li>
+                                        {% endif %}
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
 
-                            <!-- Wishlist Icon -->
-                            <li class="icons-menu-item">
-                                <a class="header-action-item header-wishlist" href="wishlist">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="21"
-                                        height="21"
-                                        fill="currentColor"
-                                        class="bi bi-heart icon-menu icon-wishlist"
-                                        viewBox="0 0 16 16"
-                                    >
-                                        <path
-                                            d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
-                                        />
-                                    </svg>
-                                </a>
-                            </li>
+                        <!-- Wishlist Icon -->
+                        <li class="">
+                            <a
+                                class="header-icon"
+                                href="javascript:void(0);"
+                                onclick="window.location.href='/wishlist'"
+                            >
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="20"
+                                    height="20"
+                                    fill="currentColor"
+                                    class="icon icon-wishlist"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
 
-                            <!-- Cart Icon -->
-                            <li class="icons-menu-item">
-                                <a class="header-action-item header-cart" href="cart">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="22"
-                                        height="22"
-                                        fill="currentColor"
-                                        class="bi bi-cart icon-menu icon-cart"
-                                        viewBox="0 0 16 16"
-                                    >
-                                        <path
-                                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
-                                        />
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+                        <!-- Cart Icon -->
+                        <li class="">
+                            <a class="header-icon" href="javascript:void(0);" onclick="window.location.href='/cart'">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="22"
+                                    height="22"
+                                    fill="currentColor"
+                                    class="icon icon-cart"
+                                    viewBox="0 0 16 16"
+                                >
+                                    <path
+                                        d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"
+                                    />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Notification Bar -->
-        {% include 'notification.html' %}
+    <!-- Notification Bar -->
+    {% include 'notification.html' %}
 
-        <!-- Search Wrapper -->
-        <div class="search-wrapper">
-            <div class="container">
-                <!-- Search Form - TOCHANGE -->
-                <form action="#" class="search-form d-flex align-items-center">
-                    <button type="submit" class="search-submit bg-transparent pl-0 text-start">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="19"
-                            height="19"
-                            fill="black"
-                            class="bi bi-search icon-search"
-                            viewBox="0 0 16 16"
-                        >
-                            <path
-                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
-                            />
-                        </svg>
-                    </button>
-                    <div class="search-input mr-4">
-                        <input type="text" placeholder="Buscar productos..." autocomplete="off" />
-                    </div>
-                    <div class="search-close">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="icon icon-close"
-                        >
-                            <line x1="18" y1="6" x2="6" y2="18"></line>
-                            <line x1="6" y1="6" x2="18" y2="18"></line>
-                        </svg>
-                    </div>
-                </form>
-            </div>
+    <!-- Search Wrapper -->
+    <div class="search-wrapper">
+        <div class="container">
+            <!-- Search Form - TOCHANGE -->
+            <form action="" class="search-form d-flex align-items-center">
+                <button type="submit" class="search-submit bg-transparent pl-0 text-start">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="19"
+                        height="19"
+                        fill="currentColor"
+                        class="icon icon-search"
+                        viewBox="0 0 16 16"
+                    >
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                        />
+                    </svg>
+                </button>
+
+                <div class="search-input mr-4">
+                    <input type="text" placeholder="Buscar productos..." autocomplete="off" />
+                </div>
+
+                <div class="search-close">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="icon icon-close"
+                    >
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </div>
+            </form>
         </div>
     </div>
 </header>

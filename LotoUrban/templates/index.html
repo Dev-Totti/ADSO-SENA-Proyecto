@@ -1,5 +1,162 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% load static %}
 <!-- Block Content -->
 {% block content %}
-<h1>Testing</h1>
+<main>
+    <div class="slideshow-section position-relative">
+        <div
+            class="slideshow-active activate-slider"
+            data-slick='{
+            "slidesToShow": 1, 
+            "slidesToScroll": 1, 
+            "dots": true,
+            "arrows": true,
+            "responsive": [
+                {
+                "breakpoint": 768,
+                "settings": {
+                    "arrows": false
+                }
+                }
+            ]
+        }'
+        >
+            <div class="slide-item slide-item-bag position-relative">
+                <img
+                    class="slide-img d-none d-md-block"
+                    src="{% static 'assets/img/slideshow/s1.jpg' %}"
+                    alt="slide-1"
+                />
+                <div class="content-absolute content-slide">
+                    <div class="container height-inherit d-flex align-items-center">
+                        <div class="content-box slide-content py-4">
+                            <h2
+                                class="slide-heading heading_72 animate__animated animate__fadeInUp"
+                                data-animation="animate__animated animate__fadeInUp"
+                            >
+                                Nueva Coleccion
+                            </h2>
+                            <p
+                                class="slide-subheading heading_18 animate__animated animate__fadeInUp"
+                                data-animation="animate__animated animate__fadeInUp"
+                            >
+                                Descubre la nueva linea de ropa de Loto Urban
+                            </p>
+                            <a
+                                class="btn-primary slide-btn animate__animated animate__fadeInUp"
+                                href="collection-left-sidebar.html"
+                                data-animation="animate__animated animate__fadeInUp"
+                                >Mas Informacion</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-item slide-item-bag position-relative">
+                <img
+                    class="slide-img d-none d-md-block"
+                    src="{% static 'assets/img/slideshow/s2.jpg' %}"
+                    alt="slide-2"
+                />
+                <div class="content-absolute content-slide">
+                    <div class="container height-inherit d-flex align-items-center">
+                        <div class="content-box slide-content py-4">
+                            <h2
+                                class="slide-heading heading_72 animate__animated animate__fadeInUp"
+                                data-animation="animate__animated animate__fadeInUp"
+                            >
+                                Nueva Coleccion
+                            </h2>
+                            <p
+                                class="slide-subheading heading_18 animate__animated animate__fadeInUp"
+                                data-animation="animate__animated animate__fadeInUp"
+                            >
+                                Descubre la nueva linea de ropa de Loto Urban
+                            </p>
+                            <a
+                                class="btn-primary slide-btn animate__animated animate__fadeInUp"
+                                href="collection-left-sidebar.html"
+                                data-animation="animate__animated animate__fadeInUp"
+                                >Mas Informacion</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide-item slide-item-bag position-relative">
+                <img
+                    class="slide-img d-none d-md-block"
+                    src="{% static 'assets/img/slideshow/s3.jpg' %}"
+                    alt="slide-3"
+                />
+                <div class="content-absolute content-slide">
+                    <div class="container height-inherit d-flex align-items-center">
+                        <div class="content-box slide-content py-4">
+                            <h2
+                                class="slide-heading heading_72 animate__animated animate__fadeInUp"
+                                data-animation="animate__animated animate__fadeInUp"
+                            >
+                                Nueva Coleccion
+                            </h2>
+                            <p
+                                class="slide-subheading heading_18 animate__animated animate__fadeInUp"
+                                data-animation="animate__animated animate__fadeInUp"
+                            >
+                                Descubre la nueva linea de ropa de Loto Urban
+                            </p>
+                            <a
+                                class="btn-primary slide-btn animate__animated animate__fadeInUp"
+                                href="collection-left-sidebar.html"
+                                data-animation="animate__animated animate__fadeInUp"
+                                >Mas Informacion</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="activate-arrows"></div>
+        <div class="activate-dots dot-tools"></div>
+    </div>
+
+    <div class="promo-boxes">
+        <div class="promo-box">
+            <p></p>
+            <p class="promo-box-title">Gratuito</p>
+            <p>En Ordenes superiores a $ 100.000</p>
+        </div>
+        <div class="promo-box">
+            <p></p>
+            <p class="promo-box-title">Atencion al Cliente</p>
+            <p>Soporte 24/7</p>
+        </div>
+        <div class="promo-box">
+            <p></p>
+            <p class="promo-box-title">Pago Seguro</p>
+            <p>Todas las tarjetas de credito</p>
+        </div>
+    </div>
+
+    <div class="products-container">
+        <h1>Productos Destacados</h1>
+
+        <div class="products-list">
+            {% for product in products %}
+            <div class="product-card">
+                <a href="">
+                    <div class="product-card-image">
+                        <img src="{{ product.image.url }}" alt="{{ product.name }}" />
+                    </div>
+                </a>
+                <div class="product-card-content">
+                    <a href=""><p class="product-name">{{ product.name }}</p></a>
+                    <hr />
+                    <p class="product-price">$ {{ product.price }}</p>
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+</main>
+
 {% endblock %}

@@ -3,9 +3,9 @@
 /LotoUrban/media/
 /LotoUrban/static/
 /LotoUrban/core/migrations
+/LotoUrban/templates/full
 __pycache__/
 *.sqlite3
 *.sqlite
 *.lnk
-
 

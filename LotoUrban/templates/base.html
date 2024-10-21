@@ -1,16 +1,16 @@
 {% load static %}
-
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="es">
     <head>
         <!-- Title -->
         <title>Loto Urban</title>
 
         <!-- Tags -->
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="meta description" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Loto Urban" />
+        <meta name="keywords" content="Loto Urban, Loto, Urban" />
+        <meta name="author" content="Loto Urban" />
 
         <!-- FavIcon -->
         <link rel="shortcut icon" href="{% static 'assets/img/favicon.png' %}" type="image/x-icon" />
@@ -23,45 +23,39 @@
             rel="stylesheet"
         />
 
-        <!-- Icons -->
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-        />
-
         <!-- CSS -->
         <link rel="stylesheet" href="{% static 'assets/css/vendor.css' %}" />
-        <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+        <link rel="stylesheet" href="{% static 'assets/css/mystyle.css' %}" />
     </head>
-
     <body>
-        <div class="body-wrapper">
-            <!-- Header -->
-            {% include 'header.html' %}
+        <!-- Header -->
+        {% include 'header.html' %}
 
-            <!-- Content -->
-            {% block content %}{% endblock %}
+        <!-- Main -->
+        {% block content %}{% endblock %}
 
-            <!-- Scrollup -->
-            <button id="scrollup">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="#fff"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                >
-                    <polyline points="18 15 12 9 6 15"></polyline>
-                </svg>
-            </button>
+        <!-- Footer -->
+        {% include 'footer.html' %}
 
-            <!-- JavaScript -->
-            <script src="{% static 'assets/js/vendor.js' %}"></script>
-            <script src="{% static 'assets/js/main.js' %}"></script>
-        </div>
+        <!-- Scrollup -->
+        <!-- <button id="scrollup">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+        </button> -->
+
+        <!-- JavaScript -->
+        <script src="{% static 'assets/js/vendor.js' %}"></script>
+        <script src="{% static 'assets/js/main.js' %}"></script>
     </body>
 </html>
